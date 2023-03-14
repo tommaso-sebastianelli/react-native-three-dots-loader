@@ -29,8 +29,8 @@ export default class ThreeDotsLoader extends React.Component {
     const active = this.state.active;
     return (
       <View style={styles.main}>
-        {dots.map((i) => (
-          <Dot {...this.props} active={i === active} />
+        {dots.map((i, index) => (
+          <Dot key={index} {...this.props} active={i === active} />
         ))}
       </View>
     );
